@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LeadOS | Premier WhatsApp Marketing &amp; AI Automation Agency</title>
+<meta content="LeadOS builds high-converting WhatsApp marketing funnels, AI conversational agents, and end-to-end CRM automations that scale revenue on autopilot." name="description"/>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body>
+<!-- MODAL FOR STRATEGY CALL / AUDIT -->
+<div class="modal-backdrop" id="auditModal">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal()">×</button>
+<div class="badge badge-green" style="display:inline-flex; align-items:center; gap:8px; margin-bottom:12px;">
+<span class="badge-pulse"></span> Rapid Agency Intake
+      </div>
+<h3 style="font-size:1.6rem; margin-bottom:8px;">Schedule Free WhatsApp Funnel Audit</h3>
+<p style="font-size:0.92rem; margin-bottom:24px;">Our lead engineers will inspect your current funnel, calculate your WhatsApp revenue potential, and design a custom automation roadmap.</p>
+<form id="modalAuditForm" onsubmit="handleModalSubmit(event)">
+<div class="form-group">
+<label>Full Name</label>
+<input id="mName" placeholder="Alex Morgan" required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Work Email</label>
+<input id="mEmail" placeholder="alex@company.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label>WhatsApp Number (With Country Code)</label>
+<input id="mPhone" placeholder="+1 (555) 234-5678" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label>Primary Priority</label>
+<select id="mService">
+<option value="Both">WhatsApp Marketing &amp; CRM Automations (Full Funnel)</option>
+<option value="WA_Marketing">WhatsApp Marketing &amp; Broadcast Campaigns</option>
+<option value="AI_Automation">AI Sales Chatbot &amp; CRM Synchronization</option>
+<option value="Enterprise">Custom API Integration &amp; Multi-Agent Architecture</option>
+</select>
+</div>
+<button class="btn btn-primary" style="width:100%; margin-top:10px;" type="submit">
+          Lock In Free Strategy Call &amp; Audit →
+        </button>
+</form>
+<div class="form-success-banner" id="modalSuccess" style="margin-top:20px;">
+<h5>✓ Audit Reserved!</h5>
+<p>A confirmation message and calendar link have just been dispatched to your WhatsApp number.</p>
+</div>
+</div>
+</div>
+<!-- NAVIGATION HEADER -->
+<header>
+<div class="container nav-container">
+<a class="brand-logo" href="#">
+<div class="brand-icon">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</div>
+<span>LeadOS<span style="color:var(--wa-green)">.</span></span>
+</a>
+<ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#simulator">Live Bot Demo</a></li>
+<li><a href="#workflow">Architecture</a></li>
+<li><a href="#calculator">ROI Calculator</a></li>
+<li><a href="#case-studies">Results</a></li>
+<li><a href="#pricing">Packages</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<div class="nav-actions">
+<button class="btn btn-secondary btn-sm" onclick="scrollToElement('#simulator')">Test Live Demo</button>
+<button class="btn btn-primary btn-sm btn-glow" onclick="openModal()">Get Free Audit</button>
+<button class="menu-toggle" onclick="toggleMobileNav()">☰</button>
+</div>
+</div>
+</header>
+<!-- HERO SECTION -->
+<section class="hero-section">
+<div class="container hero-grid">
+<div class="hero-content">
+<div class="badge badge-green">
+<span class="badge-pulse"></span> Meta Business Partner Ecosystem • WhatsApp API Agency
+        </div>
+<h1>Turn WhatsApp into Your <span class="gradient-text">#1 Automated</span> Revenue Channel</h1>
+<p>We build enterprise WhatsApp marketing funnels, 24/7 AI conversational SDRs, and bulletproof CRM automations that convert inbound traffic in under 3 seconds with up to 98% open rates.</p>
+<div class="hero-cta-group">
+<button class="btn btn-primary btn-glow" onclick="openModal()">
+            Claim Your Free Funnel Audit →
+          </button>
+<button class="btn btn-secondary" onclick="scrollToElement('#simulator')">
+<svg style="width:18px;height:18px;fill:var(--wa-green);" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+            Watch Interactive Simulator
+          </button>
+</div>
+<div class="hero-stats-row">
+<div class="stat-item">
+<h3>98<span>%</span></h3>
+<p>Average Open Rate</p>
+</div>
+<div class="stat-item">
+<h3>45–60<span>%</span></h3>
+<p>Click-Through Rate</p>
+</div>
+<div class="stat-item">
+<h3>&lt; 3<span>s</span></h3>
+<p>Lead Response Speed</p>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE HERO PHONE MOCKUP -->
+<div class="hero-visual">
+<div class="hero-glow-back"></div>
+<div class="phone-mockup-wrapper">
+<div class="phone-screen">
+<div class="phone-notch-bar">
+<div class="phone-notch"></div>
+</div>
+<div class="phone-wa-header">
+<div class="wa-avatar">OS</div>
+<div class="wa-chat-info">
+<h4>LeadOS Concierge
+                  <svg class="wa-verified-icon" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+</h4>
+<p>Verified Business Account</p>
+</div>
+</div>
+<div class="phone-messages-area">
+<div class="wa-bubble wa-bubble-bot">
+                Hey Marcus! 👋 Saw you were browsing our Enterprise RevOps plan. Want me to calculate your potential pipeline lift on WhatsApp?
+                <div class="wa-bubble-time">10:42 AM</div>
+</div>
+<div class="wa-bubble wa-bubble-user">
+                Yes please! We generate roughly 1,200 leads/mo.
+                <div class="wa-bubble-time">10:43 AM <span class="wa-double-check">✓✓</span></div>
+</div>
+<div class="wa-bubble wa-bubble-bot">
+                Done! 🚀 At a 42% WhatsApp engagement rate, that's <strong>+$38,400 projected ARR</strong> recovered from drop-offs.
+                <div class="wa-quick-actions">
+<div class="wa-action-btn" onclick="openModal()">📅 Book Strategy Call</div>
+<div class="wa-action-btn" onclick="scrollToElement('#calculator')">📊 View Full Model</div>
+</div>
+<div class="wa-bubble-time">10:43 AM</div>
+</div>
+</div>
+<div class="phone-input-bar">
+<div class="phone-input-fake">Type a message...</div>
+<div class="phone-mic-btn">
+<svg style="width:16px;height:16px;fill:white;" viewbox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.09-.6-.39-1.14-1-1.14z"></path></svg>
+</div>
+</div>
+</div>
+</div>
+<div class="floating-stat-pill">
+<div class="pill-icon">
+<svg style="width:20px;height:20px;fill:currentColor;" viewbox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"></path></svg>
+</div>
+<div class="pill-data">
+<h5>+340% Conversions</h5>
+<p>Synced to HubSpot in 1.4s</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRUSTED INTEGRATIONS MARQUEE -->
+<div class="trust-section">
+<div class="container">
+<div class="trust-label">Seamless Integration With Your Revenue &amp; Tech Stack</div>
+<div class="logos-grid">
+<div class="logo-item">
+<svg viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+          Meta Official API
+        </div>
+<div class="logo-item">
+<svg viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"></path></svg>
+          HubSpot CRM
+        </div>
+<div class="logo-item">
+<svg viewbox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"></path></svg>
+          Salesforce
+        </div>
+<div class="logo-item">
+<svg viewbox="0 0 24 24"><path d="M4 4h16v16H4z"></path></svg>
+          Shopify Plus
+        </div>
+<div class="logo-item">
+<svg viewbox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          Make / n8n
+        </div>
+<div class="logo-item">
+<svg viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          Zapier
+        </div>
+<div class="logo-item">
+<svg viewbox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+          OpenAI LLMs
+        </div>
+</div>
+</div>
+</div>
+<!-- DUAL SERVICES PILLARS -->
+<section id="services">
+<div class="container">
+<div class="section-header">
+<div class="badge badge-green">Dual Core Revenue Engines</div>
+<h2>Enterprise WhatsApp Marketing &amp; Intelligent Automation</h2>
+<p>We bridge high-conversion conversational customer acquisition with deep backend workflow automation. No generic bots. No dropped leads.</p>
+</div>
+<div class="services-grid">
+<!-- PILLAR 1: WHATSAPP MARKETING -->
+<div class="pillar-card">
+<div class="pillar-badge-bar">
+<div class="pillar-icon-box">
+<svg viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.49 3.53 1.34 5L2 22l5.2-1.31C8.61 21.49 10.26 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"></path></svg>
+</div>
+<div class="badge badge-green">Pillar 01</div>
+</div>
+<h3>WhatsApp Marketing Services</h3>
+<p>Supercharge your acquisition and retention funnels. We turn broadcast messaging into personal, high-converting revenue dialogues.</p>
+<div class="service-items-list">
+<div class="service-item-row">
+<div class="service-check">✓</div>
+<div class="service-item-content">
+<h4>Verified WhatsApp Business API Setup</h4>
+<p>Complete Meta business verification, official green checkmark badge acquisition, and tier-scaling management (up to unlimited daily messaging).</p>
+</div>
+</div>
+<div class="service-item-row">
+<div class="service-check">✓</div>
+<div class="service-item-content">
+<h4>High-Yield Broadcasts &amp; Segmentation</h4>
+<p>Hyper-personalized outbound promotional campaigns with rich media carousels, dynamic product catalogs, and zero-spam compliance tracking.</p>
+</div>
+</div>
+<div class="service-item-row">
+<div class="service-check">✓</div>
+<div class="service-item-content">
+<h4>Click-to-WhatsApp (CTWA) Ad Architecture</h4>
+<p>Full-funnel Meta Ads (FB &amp; IG) directing prospects straight into pre-filled WhatsApp conversations with automated lead attribution.</p>
+</div>
+</div>
+<div class="service-item-row">
+<div class="service-check">✓</div>
+<div class="service-item-content">
+<h4>E-Commerce Cart Recovery &amp; Upsells</h4>
+<p>Recover 24-32% of abandoned carts with instant WhatsApp alerts, 1-click checkout links, and automated post-purchase replenishment loops.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- PILLAR 2: AUTOMATION & AI CRM -->
+<div class="pillar-card automation">
+<div class="pillar-badge-bar">
+<div class="pillar-icon-box">
+<svg viewbox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"></path></svg>
+</div>
+<div class="badge" style="background:rgba(56,189,248,0.15); border-color:rgba(56,189,248,0.3); color:#38BDF8;">Pillar 02</div>
+</div>
+<h3>Intelligent Business Automations</h3>
+<p>Remove human bottlenecks. We construct autonomous agentic pipelines that qualify prospects, sync your CRM, and book meetings 24/7.</p>
+<div class="service-items-list">
+<div class="service-item-row">
+<div class="service-check">✓</div>
+<div class="service-item-content">
+<h4>24/7 Conversational AI SDR Agents</h4>
+<p>Domain-trained AI agents that understand context, answer deep product queries, qualify buyer budgets, and overcome objections in 60+ languages.</p>
+</div>
+</div>
+<div class="service-item-row">
+<div class="service-check">✓</div>
+<div class="service-item-content">
+<h4>Bi-Directional CRM &amp; ERP Synchronization</h4>
+<p>Instant two-way sync with HubSpot, Salesforce, Pipedrive, and Zoho. Create contacts, log chat transcripts, update deal stages, and score leads.</p>
+</div>
+</div>
+<div class="service-item-row">
+<div class="service-check">✓</div>
+<div class="service-item-content">
+<h4>Automated Calendar Booking &amp; SLA Reminders</h4>
+<p>Direct Google Calendar/Calendly scheduling inside WhatsApp. Reduces meeting no-show rates by 70% with automated reminder cadence.</p>
+</div>
+</div>
+<div class="service-item-row">
+<div class="service-check">✓</div>
+<div class="service-item-content">
+<h4>Custom Webhooks, Make &amp; n8n Pipelines</h4>
+<p>Complex serverless workflows connecting payment processors (Stripe/PayPal), inventory databases, ticketing tools, and internal Slack alerts.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE SIMULATOR SECTION -->
+<section class="simulator-section" id="simulator">
+<div class="container">
+<div class="section-header">
+<div class="badge badge-green">
+<span class="badge-pulse"></span> Live Interactive Prototype
+        </div>
+<h2>Test the LeadOS Experience in Real-Time</h2>
+<p>Switch between real client scenarios below. Interact with our simulated AI SDR and watch backend CRM automations fire live.</p>
+</div>
+<!-- SCENARIO SWITCHER TABS -->
+<div class="sim-tab-controls">
+<button class="sim-tab-btn active" onclick="switchSimFlow('b2b', this)">
+          💼 B2B SaaS Demo Booking
+        </button>
+<button class="sim-tab-btn" onclick="switchSimFlow('ecom', this)">
+          🛍️ E-Commerce Cart Recovery
+        </button>
+<button class="sim-tab-btn" onclick="switchSimFlow('estate', this)">
+          🏢 Real Estate VIP Consultation
+        </button>
+<button class="sim-tab-btn" onclick="switchSimFlow('clinic', this)">
+          🩺 Healthcare Appointment Booking
+        </button>
+</div>
+<div class="simulator-layout">
+<!-- SIMULATOR SMARTPHONE -->
+<div class="sim-phone">
+<div class="sim-phone-screen">
+<div class="sim-wa-header">
+<div class="sim-wa-profile">
+<div class="wa-avatar" id="simAvatar">OS</div>
+<div>
+<h4 id="simBotName" style="font-size:0.9rem; margin:0; display:flex; align-items:center; gap:5px;">
+                    LeadOS AI Agent
+                    <svg class="wa-verified-icon" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+</h4>
+<span style="font-size:0.72rem; color:#8696A0;"><span class="sim-status-dot"></span> online</span>
+</div>
+</div>
+<button onclick="resetCurrentFlow()" style="background:none; border:none; color:#8696A0; font-size:0.8rem; cursor:pointer;" title="Restart Chat">↺ Reset</button>
+</div>
+<!-- CHAT LOG CONTAINER -->
+<div class="sim-messages-scroll" id="simMessagesScroll">
+<!-- Messages injected via JS -->
+</div>
+<div class="typing-indicator" id="simTyping">
+<div class="typing-dot"></div>
+<div class="typing-dot"></div>
+<div class="typing-dot"></div>
+</div>
+<div class="sim-chat-input-box">
+<input id="simUserInput" onkeypress="handleSimEnter(event)" placeholder="Type a reply or click above buttons..." type="text"/>
+<button class="sim-send-btn" onclick="sendSimUserMessage()">
+<svg style="width:16px;height:16px;fill:white;" viewbox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: LIVE AUTOMATION LOG -->
+<div class="sim-backend-panel">
+<div class="backend-header">
+<h4>
+<span class="badge-pulse"></span>
+              Live Automation Stream &amp; CRM Sync
+            </h4>
+<span class="badge" style="font-size:0.75rem;">Status: Active Webhook Listener</span>
+</div>
+<p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:14px;">
+            As leads reply on WhatsApp, LeadOS pipelines instantly trigger webhooks, query databases, classify intent, update deal stages, and dispatch notifications.
+          </p>
+<div class="live-feed-logs" id="liveFeedLogs">
+<!-- Dynamic Log entries -->
+</div>
+<div class="backend-quick-stats">
+<div class="b-stat">
+<span>Avg Latency</span>
+<strong style="color:var(--wa-green);">140 ms</strong>
+</div>
+<div class="b-stat">
+<span>Webhook Success</span>
+<strong style="color:#38BDF8;">99.98%</strong>
+</div>
+<div class="b-stat">
+<span>CRM Enriched</span>
+<strong style="color:#A78BFA;">Real-Time</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROI CALCULATOR SECTION -->
+<section id="calculator">
+<div class="container">
+<div class="section-header">
+<div class="badge badge-green">Data-Backed ROI</div>
+<h2>Calculate Your WhatsApp Revenue Impact</h2>
+<p>Adjust your current monthly metrics to see the exact pipeline and revenue lift LeadOS creates by eliminating lead drop-off.</p>
+</div>
+<div class="calculator-card">
+<div class="calc-grid">
+<div class="calc-controls">
+<div class="slider-group">
+<div class="slider-header">
+<label>Monthly Inbound Leads</label>
+<div class="slider-value-display" id="dispLeads">2,500</div>
+</div>
+<input id="inputLeads" max="20000" min="200" oninput="updateCalculator()" step="100" type="range" value="2500"/>
+<span style="font-size:0.78rem; color:var(--text-dim);">Website visitors, social ad inquiries, or form fills per month</span>
+</div>
+<div class="slider-group">
+<div class="slider-header">
+<label>Average Customer / Deal Value ($)</label>
+<div class="slider-value-display" id="dispAOV">$450</div>
+</div>
+<input id="inputAOV" max="5000" min="50" oninput="updateCalculator()" step="50" type="range" value="450"/>
+<span style="font-size:0.78rem; color:var(--text-dim);">Average order value (D2C) or initial contract value (B2B)</span>
+</div>
+<div class="slider-group">
+<div class="slider-header">
+<label>Current Conversion Rate (%)</label>
+<div class="slider-value-display" id="dispCR">2.5%</div>
+</div>
+<input id="inputCR" max="8.0" min="0.5" oninput="updateCalculator()" step="0.1" type="range" value="2.5"/>
+<span style="font-size:0.78rem; color:var(--text-dim);">Your existing email or standard web checkout conversion rate</span>
+</div>
+<div class="slider-group">
+<div class="slider-header">
+<label>Target WhatsApp Funnel Adoption (%)</label>
+<div class="slider-value-display" id="dispAdoption">65%</div>
+</div>
+<input id="inputAdoption" max="95" min="20" oninput="updateCalculator()" step="5" type="range" value="65"/>
+<span style="font-size:0.78rem; color:var(--text-dim);">Percentage of traffic routed into automated WhatsApp flows</span>
+</div>
+</div>
+<!-- CALCULATOR RESULTS -->
+<div class="calc-results-box">
+<div class="calc-result-metric">
+<h5>Projected Monthly Added Revenue</h5>
+<div class="res-num" id="resMonthlyRev">$42,188</div>
+<div class="res-sub" id="resAnnualRev">+$506,250 Annualized Pipeline Expansion</div>
+</div>
+<div class="calc-result-metric">
+<h5>Additional Closed Deals / Customers</h5>
+<div class="res-num" id="resDeals" style="color:var(--ai-blue);">+94 / mo</div>
+<div class="res-sub" id="resLeadsEngaged" style="color:var(--text-muted);">1,580 leads engaged in &lt; 3 seconds</div>
+</div>
+<div class="calc-result-metric">
+<h5>Sales Team Response Time Saved</h5>
+<div class="res-num" id="resHours" style="color:#A78BFA;">185 hrs</div>
+<div class="res-sub" style="color:var(--text-muted);">Autonomous 24/7 AI qualification without human SDR overhead</div>
+</div>
+<button class="btn btn-primary" onclick="openModal()" style="margin-top:10px;">
+              Build This Custom Funnel For My Brand →
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4-STEP ARCHITECTURE & WORKFLOW -->
+<section id="workflow" style="background:#090E1A;">
+<div class="container">
+<div class="section-header">
+<div class="badge badge-green">Enterprise Architecture</div>
+<h2>The 4-Step LeadOS Revenue Engine</h2>
+<p>A structured, fault-tolerant infrastructure built on official Meta APIs and enterprise automation frameworks.</p>
+</div>
+<div class="workflow-steps-grid">
+<div class="step-card">
+<div class="step-number">
+            PHASE 01
+            <span class="step-pill">Ingestion</span>
+</div>
+<h4>Frictionless Capture</h4>
+<p>Prospects trigger WhatsApp directly from Meta Ads (CTWA), website floating widgets, QR codes, or SMS fallbacks without typing an email.</p>
+<div class="step-tech-tags">
+<span class="tech-tag">Meta Ads API</span>
+<span class="tech-tag">Deep Linking</span>
+<span class="tech-tag">Dynamic UTMs</span>
+</div>
+</div>
+<div class="step-card">
+<div class="step-number">
+            PHASE 02
+            <span class="step-pill">&lt; 3s SLA</span>
+</div>
+<h4>Intelligent Triage</h4>
+<p>Our custom LLM parses the prospect's intent, qualifies budget, extracts requirements, and scores lead tier in conversational natural language.</p>
+<div class="step-tech-tags">
+<span class="tech-tag">OpenAI Function Calling</span>
+<span class="tech-tag">Vector Memory</span>
+<span class="tech-tag">Sentiment Analysis</span>
+</div>
+</div>
+<div class="step-card">
+<div class="step-number">
+            PHASE 03
+            <span class="step-pill">Zero Touch</span>
+</div>
+<h4>Conversion &amp; Booking</h4>
+<p>The bot serves rich media product catalogs, delivers personalized PDF quotes, or locks in calendar appointments with Google/Outlook sync.</p>
+<div class="step-tech-tags">
+<span class="tech-tag">Native Cal.com API</span>
+<span class="tech-tag">Interactive Buttons</span>
+<span class="tech-tag">Stripe Checkout</span>
+</div>
+</div>
+<div class="step-card">
+<div class="step-number">
+            PHASE 04
+            <span class="step-pill">Retention</span>
+</div>
+<h4>CRM Sync &amp; Re-Engagement</h4>
+<p>Every interaction is timestamped and pushed to your CRM. Inactive leads enter automated, non-intrusive drip sequences that maximize LTV.</p>
+<div class="step-tech-tags">
+<span class="tech-tag">HubSpot / Salesforce</span>
+<span class="tech-tag">Make / n8n</span>
+<span class="tech-tag">Slack Webhooks</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CASE STUDIES / RESULTS -->
+<section id="case-studies">
+<div class="container">
+<div class="section-header">
+<div class="badge badge-green">Proven Impact</div>
+<h2>Real Client Case Studies &amp; Quantified Results</h2>
+<p>Explore how forward-thinking brands use LeadOS to outpace competitors relying solely on legacy email campaigns.</p>
+</div>
+<div class="case-studies-grid">
+<div class="case-card">
+<div class="case-industry">D2C Luxury Apparel</div>
+<h3>LuxeFit: +$340k Revenue via Automated Cart Recovery</h3>
+<p>Replaced slow 24-hour email abandon flows with 15-minute personalized WhatsApp reminders featuring dynamic discounts.</p>
+<div class="case-metrics-banner">
+<div class="case-metric-item">
+<h4>28.4%</h4>
+<span>Cart Recovery</span>
+</div>
+<div class="case-metric-item">
+<h4>9.2x</h4>
+<span>Campaign ROI</span>
+</div>
+<div class="case-metric-item">
+<h4>94%</h4>
+<span>Open Rate</span>
+</div>
+</div>
+<div class="case-quote">
+            "LeadOS completely transformed our weekend revenue. We recover nearly a third of all abandoned carts without running expensive retargeting ads."
+            <div class="case-author">Elena Rostova, <span>Head of Growth at LuxeFit</span></div>
+</div>
+</div>
+<div class="case-card">
+<div class="case-industry">B2B Enterprise SaaS</div>
+<h3>CloudScale: 4.8x Sales Velocity with AI Chatbot SDR</h3>
+<p>Trained custom AI bot on 400 pages of API docs to qualify inbound enterprise leads and schedule qualified executive demos 24/7.</p>
+<div class="case-metrics-banner">
+<div class="case-metric-item">
+<h4>&lt; 4s</h4>
+<span>First Response</span>
+</div>
+<div class="case-metric-item">
+<h4>+180%</h4>
+<span>Demo Bookings</span>
+</div>
+<div class="case-metric-item">
+<h4>74%</h4>
+<span>Less No-Shows</span>
+</div>
+</div>
+<div class="case-quote">
+            "Prospects are shocked when our WhatsApp bot answers complex technical pricing questions in seconds and books them directly on our calendar."
+            <div class="case-author">David Vance, <span>VP of Sales at CloudScale</span></div>
+</div>
+</div>
+<div class="case-card">
+<div class="case-industry">Prime Real Estate</div>
+<h3>Apex Living: $14M in Attributable Property Sales</h3>
+<p>Deployed Click-to-WhatsApp Meta ads paired with instant brochure delivery and automated VIP site-tour scheduling.</p>
+<div class="case-metrics-banner">
+<div class="case-metric-item">
+<h4>1,420+</h4>
+<span>Site Visits Booked</span>
+</div>
+<div class="case-metric-item">
+<h4>-58%</h4>
+<span>Cost Per Lead</span>
+</div>
+<div class="case-metric-item">
+<h4>99.2%</h4>
+<span>CRM Sync SLA</span>
+</div>
+</div>
+<div class="case-quote">
+            "High-net-worth buyers hate email forms. WhatsApp gave us a direct private hotline that closed multiple penthouse contracts in weeks."
+            <div class="case-author">Siddharth Mehta, <span>Managing Director at Apex</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRICING & SERVICE PACKAGES -->
+<section id="pricing" style="background:#090E1A;">
+<div class="container">
+<div class="section-header">
+<div class="badge badge-green">Transparent Partnership</div>
+<h2>Engineered Packages for Every Growth Stage</h2>
+<p>Transparent monthly retainers with zero hidden fees. Dedicated engineers, full Meta compliance, and proactive weekly optimization.</p>
+</div>
+<div class="pricing-grid">
+<!-- TIER 1 -->
+<div class="pricing-card">
+<h3>Starter Launch</h3>
+<p class="pricing-desc">For fast-growing brands establishing their first verified WhatsApp marketing funnel.</p>
+<div class="price-value">
+<span class="amount">$2,490</span>
+<span class="period">/ month</span>
+</div>
+<ul class="price-features">
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Official WhatsApp Business API setup
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Green Checkmark verification submission
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              2 Custom automated marketing funnels
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Up to 25,000 monthly active conversations
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Google Sheets &amp; Webhook integration
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Email &amp; Ticket support (24h SLA)
+            </li>
+</ul>
+<button class="btn btn-secondary" onclick="openModal('Starter Launch')">Choose Starter</button>
+</div>
+<!-- TIER 2 (FEATURED) -->
+<div class="pricing-card featured">
+<div class="featured-tag">Most Popular • Full Stack</div>
+<h3>Growth &amp; Scale</h3>
+<p class="pricing-desc">Full-funnel WhatsApp marketing paired with autonomous AI SDR and two-way CRM sync.</p>
+<div class="price-value">
+<span class="amount">$4,890</span>
+<span class="period">/ month</span>
+</div>
+<ul class="price-features">
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+<strong>Everything in Starter, plus:</strong>
+</li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              24/7 Custom AI SDR Agent (GPT-4o fine-tuned)
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Full HubSpot / Salesforce 2-Way Sync
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Click-to-WhatsApp (CTWA) Ad tracking setup
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Automated meeting booking &amp; reminder loops
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Dedicated Slack channel &amp; weekly sprint calls
+            </li>
+</ul>
+<button class="btn btn-primary btn-glow" onclick="openModal('Growth &amp; Scale')">Get Started with Scale</button>
+</div>
+<!-- TIER 3 -->
+<div class="pricing-card">
+<h3>Enterprise Custom</h3>
+<p class="pricing-desc">For high-volume corporations requiring multi-country WABA numbers and bespoke ERP architecture.</p>
+<div class="price-value">
+<span class="amount">$8,950+</span>
+<span class="period">/ month</span>
+</div>
+<ul class="price-features">
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Multi-number international routing (Tier 3 / Unlimited)
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Multi-Agent Orchestration (Sales, Support, Billing)
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Custom internal ERP / SAP / Oracle pipelines
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              SOC2 &amp; GDPR compliance data handling
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Dedicated Solutions Architect on call
+            </li>
+<li>
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Guaranteed 15-minute emergency SLA
+            </li>
+</ul>
+<button class="btn btn-secondary" onclick="openModal('Enterprise Custom')">Contact Solutions Team</button>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ SECTION -->
+<section id="faq">
+<div class="container">
+<div class="section-header">
+<div class="badge badge-green">Everything Explained</div>
+<h2>Frequently Asked Questions</h2>
+<p>Clear, direct answers regarding Meta API pricing, compliance, integration capabilities, and deployment timelines.</p>
+</div>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+            How is the official WhatsApp Business API different from the WhatsApp Business App?
+            <svg class="faq-icon" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</div>
+<div class="faq-answer">
+            The free phone app is limited to 1 device, requires manual typing, has strict broadcast caps (256 contacts who must save your number), and cannot connect to your CRM. The WhatsApp Business API (WABA) allows unlimited concurrent agents, enterprise-level throughput, verified green checkmark badges, AI chatbot automation, and programmatic CRM integration. LeadOS handles 100% of the API provisioning and technical setup.
+          </div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+            How are Meta's conversation fees billed?
+            <svg class="faq-icon" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</div>
+<div class="faq-answer">
+            Meta charges per 24-hour conversation window based on the message category (Marketing, Utility, Authentication, or Service). Service conversations (initiated by a customer message) are significantly cheaper or free within Meta's monthly tier allowances. LeadOS optimizes your message templates to ensure you get the highest conversion rate at the lowest possible Meta messaging cost.
+          </div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+            Can we keep human agents in the loop when needed?
+            <svg class="faq-icon" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</div>
+<div class="faq-answer">
+            Yes, absolutely. We design seamless Human-in-the-Loop (HITL) workflows. When a prospect requests a human, triggers an escalation keyword, or indicates high deal intent, the bot instantly pauses, pings your sales team in Slack or Microsoft Teams, and passes the entire conversation transcript over with zero friction.
+          </div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+            Which CRMs and tools do you support out of the box?
+            <svg class="faq-icon" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</div>
+<div class="faq-answer">
+            We integrate natively with HubSpot, Salesforce, Pipedrive, Zoho, ActiveCampaign, Klaviyo, and Shopify. For custom tech stacks, we build webhook-based pipelines on Make.com, n8n, Zapier, or custom AWS/GCP serverless functions to sync with PostgreSQL, MySQL, and proprietary internal APIs.
+          </div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+            How fast can we go live?
+            <svg class="faq-icon" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</div>
+<div class="faq-answer">
+            Our standard onboarding and architecture deployment takes 7 to 14 business days. This includes Meta Business Manager verification, WABA phone number provisioning, AI prompt engineering, CRM field mapping, and sandbox load testing before official traffic launch.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA AUDIT INTAKE BANNER -->
+<section class="cta-banner-section">
+<div class="container">
+<div class="cta-box">
+<div class="cta-text">
+<div class="badge badge-green" style="margin-bottom:14px;">
+<span class="badge-pulse"></span> Zero-Risk Consultation
+          </div>
+<h2>Ready to Build Your WhatsApp Revenue Machine?</h2>
+<p>Book a free 30-minute technical audit. We'll map out your ideal funnel, audit your existing lead response time, and present a custom automation prototype.</p>
+<div class="cta-bullets">
+<div class="cta-bullet">
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Comprehensive WhatsApp Revenue &amp; Drop-off Analysis
+            </div>
+<div class="cta-bullet">
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Custom Architecture Blueprint for HubSpot / Salesforce
+            </div>
+<div class="cta-bullet">
+<svg viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+              Complimentary Meta Business API Verification Guidance
+            </div>
+</div>
+</div>
+<!-- EMBEDDED AUDIT REQUEST FORM -->
+<div class="audit-form-card">
+<h4>Request Strategy Audit</h4>
+<p>Direct response from our lead engineer within 4 hours.</p>
+<form id="inlineAuditForm" onsubmit="handleInlineSubmit(event)">
+<div class="form-group">
+<label>Your Name</label>
+<input id="inName" placeholder="Sarah Connor" required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Company Email</label>
+<input id="inEmail" placeholder="sarah@company.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label>WhatsApp Number</label>
+<input id="inPhone" placeholder="+1 (555) 019-2834" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label>Current Monthly Leads</label>
+<select id="inVolume">
+<option value="500-2k">500 – 2,000 leads / mo</option>
+<option value="2k-10k">2,000 – 10,000 leads / mo</option>
+<option value="10k+">10,000+ enterprise leads / mo</option>
+</select>
+</div>
+<button class="btn btn-primary" style="width:100%; margin-top:8px;" type="submit">
+              Get My Free Custom Funnel Plan →
+            </button>
+</form>
+<div class="form-success-banner" id="inlineSuccess" style="margin-top:16px;">
+<h5>✓ Funnel Audit Dispatched!</h5>
+<p>Our automation bot has dispatched a calendar confirmation link to your WhatsApp number.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="brand-logo" href="#">
+<div class="brand-icon">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</div>
+<span>LeadOS<span style="color:var(--wa-green)">.</span></span>
+</a>
+<p>
+            LeadOS is the premier agency engineering high-conversion WhatsApp marketing funnels and intelligent CRM automation infrastructure for enterprise brands worldwide.
+          </p>
+</div>
+<div class="footer-col">
+<h5>Core Services</h5>
+<ul class="footer-links">
+<li><a href="#services">WhatsApp API Setup</a></li>
+<li><a href="#services">Meta CTWA Ad Funnels</a></li>
+<li><a href="#services">24/7 AI SDR Agents</a></li>
+<li><a href="#services">HubSpot &amp; Salesforce Sync</a></li>
+<li><a href="#services">E-Commerce Cart Recovery</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Platform &amp; Tools</h5>
+<ul class="footer-links">
+<li><a href="#simulator">Live Bot Simulator</a></li>
+<li><a href="#calculator">ROI Revenue Calculator</a></li>
+<li><a href="#workflow">Architecture Pipeline</a></li>
+<li><a href="#case-studies">Client Case Studies</a></li>
+<li><a href="#pricing">Agency Packages</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Compliance &amp; Security</h5>
+<p style="font-size:0.85rem; color:var(--text-dim); line-height:1.6; margin-bottom:12px;">
+            Certified under Meta Business Solution Provider ecosystem standards. Strict GDPR, CCPA, and ISO-compliant customer data isolation.
+          </p>
+<div class="badge badge-green" style="font-size:0.75rem;">
+            Meta Verified Ecosystem
+          </div>
+</div>
+</div>
+<div class="footer-bottom">
+<div>© 2026 LeadOS Technologies Inc. All rights reserved.</div>
+<div style="display:flex; gap:20px;">
+<a href="#" style="color:var(--text-dim);">Privacy Policy</a>
+<a href="#" style="color:var(--text-dim);">Terms of Service</a>
+<a href="#" style="color:var(--text-dim);">Security Overview</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- SCRIPT LOGIC FOR INTERACTIVITY -->
+
+<script src="app.js"></script></body>
+</html>
